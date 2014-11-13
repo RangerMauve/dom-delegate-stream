@@ -1,0 +1,29 @@
+{
+  "name": "dom-delegate-stream",
+  "version": "0.0.0",
+  "description": "Uses DOM event delegation to create streams of events that target specific elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RangerMauve/dom-delegate-stream.git"
+  },
+  "keywords": [
+    "delegate",
+    "stream",
+    "dom",
+    "events",
+    "browser"
+  ],
+  "author": "RangerMauve",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RangerMauve/dom-delegate-stream/issues"
+  },
+  "homepage": "https://github.com/RangerMauve/dom-delegate-stream",
+  "dependencies": {
+    "dom-delegate": "^2.0.3"
+  }
+}

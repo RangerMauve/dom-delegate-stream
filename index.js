@@ -1,6 +1,11 @@
 var delegate = require("dom-delegate");
 var Readable = require("stream").Readable;
 
+module.exports = domDelegateStream;
+domDelegateStream.Delegate = domDelegateStream;
+
+function noop() {}
+
 function domDelegateStream(element) {
 	var delegator = delegate(element);
 
@@ -12,13 +17,24 @@ function domDelegateStream(element) {
 	}
 
 	function on(eventType, selector, useCapture) {
-		// TODO: Return readable stream here
+		var stream = new Readable({
+			objectMode: true
+		});
 
-		function handler() {
+		stream._read = noop;
 
+		stream.destroy = function () {
+			delegator.off(eventType, selector, handler);
+			stream.push(null);
 		}
 
-		delegator.on(eventType, selector, handler, useCapture);
+		function handler(event) {
+			stream.push(event);
+		}
+
+		delegator.on(eventType, selector, handler);
+
+		return stream;
 	}
 
 	function off(eventType, selector, useCapture) {

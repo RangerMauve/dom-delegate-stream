@@ -37,10 +37,6 @@ function domDelegateStream(element) {
 		return stream;
 	}
 
-	function off(eventType, selector, useCapture) {
-		return delegator.off(eventType, selector, useCapture);
-	}
-
 	function root(element) {
 		return delegator.root(element);
 	}

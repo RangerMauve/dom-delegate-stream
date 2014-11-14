@@ -1,6 +1,6 @@
 {
   "name": "dom-delegate-stream",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Uses DOM event delegation to create streams of events that target specific elements",
   "main": "index.js",
   "scripts": {

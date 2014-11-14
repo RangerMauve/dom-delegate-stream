@@ -15,7 +15,6 @@ function Delegator(element) {
 
 	return {
 		on: on,
-		off: off,
 		root: root,
 		destroy: destroy
 	}

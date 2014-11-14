@@ -25,12 +25,13 @@
   },
   "homepage": "https://github.com/RangerMauve/dom-delegate-stream",
   "dependencies": {
-    "dom-delegate": "^2.0.3",
-    "map-stream": "0.0.5"
+    "dom-delegate": "^2.0.3"
   },
   "devDependencies": {
+    "map-stream": "0.0.5",
+    "array-concat-stream": "^1.0.0",
     "browserify": "^6.3.2",
-    "stdout": "0.0.3",
+    "html-patcher-stream": "^1.0.0",
     "through2-map": "^1.4.0"
   }
 }

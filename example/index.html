@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <title>dom-delegate-stream</title>
 <style>
-	button,
-	pre {
+	button {
 		border: 1px solid black;
 		padding: 8px;
 		width: 200px;
 		margin: 4px auto;
 		display: block;
+		box-sizing: border-box;
+	}
+	#output {
+		box-sizing: border-box;
+		border: 2px solid black;
+		max-width: 240px;
+		margin: 0 auto;
+		padding: 4px;
+		text-align: center;
 	}
 </style>
 <div>
@@ -15,5 +23,5 @@
 	<button>Bar</button>
 	<button>Baz</button>
 </div>
-<pre id="output"></pre>
+<div id="output"></div>
 <script src="bundle.js"></script>
